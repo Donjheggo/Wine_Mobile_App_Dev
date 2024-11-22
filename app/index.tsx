@@ -1,4 +1,5 @@
 import { Text, View } from "react-native";
+import { Sun } from "lucide-react-native";
 
 export default function Index() {
   return (
@@ -10,6 +11,7 @@ export default function Index() {
       }}
     >
       <Text className="text-2xl">Initialized Nativewind</Text>
+      <Sun />
     </View>
   );
 }
