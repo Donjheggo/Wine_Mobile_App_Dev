@@ -11,6 +11,28 @@
     "ios": {
       "supportsTablet": true
     },
+    "fonts": [
+      {
+        "asset": "./assets/fonts/Poppins-Light.ttf",
+        "name": "Light"
+      },
+      {
+        "asset": "./assets/fonts/Poppins-Regular.ttf",
+        "name": "Regular"
+      },
+      {
+        "asset": "./assets/fonts/Poppins-Medium.ttf",
+        "name": "Medium"
+      },
+      {
+        "asset": "./assets/fonts/Poppins-SemiBold.ttf",
+        "name": "SemiBold"
+      },
+      {
+        "asset": "./assets/fonts/Poppins-Bold.ttf",
+        "name": "Bold"
+      }
+    ],
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
