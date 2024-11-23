@@ -15,9 +15,11 @@ export default function Index() {
             contentFit="contain"
             style={{ width: 300, height: 300 }}
           />
-          <Button variant="default" size="lg" className="w-full">
-            <Text>Create an Account</Text>
-          </Button>
+          <Link href="/(auth)/(sign-up)/step-1" asChild>
+            <Button variant="default" size="lg" className="w-full">
+              <Text>Create an Account</Text>
+            </Button>
+          </Link>
           <View className="mt-6 flex flex-row gap-4 items-center justify-center w-full">
             <Separator className="my-4" />
             <Text className="text-gray-400">OR</Text>
