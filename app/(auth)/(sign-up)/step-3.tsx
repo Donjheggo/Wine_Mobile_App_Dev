@@ -19,8 +19,8 @@ import { CameraView, CameraType, useCameraPermissions } from "expo-camera";
 import { SwitchCamera } from "~/lib/icons/switch-camera";
 import { X } from "~/lib/icons/x";
 import type { RegisterStepThreeFormT } from "~/lib/types";
-import BackButton from "~/components/back-button";
-import CameraInput from "~/components/camera-input";
+import BackButton from "~/components/ui/back-button";
+import CameraInput from "~/components/ui/camera-input";
 
 export default function Screen() {
   const [facing, setFacing] = useState<CameraType>("back");

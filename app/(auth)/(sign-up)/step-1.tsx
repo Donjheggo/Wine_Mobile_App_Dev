@@ -7,7 +7,7 @@ import { Button } from "~/components/ui/button";
 import { Image } from "expo-image";
 import { useState } from "react";
 import { Separator } from "~/components/ui/separator";
-import BackButton from "~/components/back-button";
+import BackButton from "~/components/ui/back-button";
 import { router } from "expo-router";
 import type { RegisterStepOneFormT } from "~/lib/types";
 

@@ -11,7 +11,7 @@ import { View } from "react-native";
 import { Text } from "~/components/ui/text";
 import { Progress } from "~/components/ui/progress";
 import { useState } from "react";
-import BackButton from "~/components/back-button";
+import BackButton from "~/components/ui/back-button";
 import { Button } from "~/components/ui/button";
 import { router } from "expo-router";
 import type { RegisterStepTwoFormT } from "~/lib/types";

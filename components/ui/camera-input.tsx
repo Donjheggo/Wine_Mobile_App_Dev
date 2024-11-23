@@ -1,6 +1,6 @@
 import { TouchableOpacity, View } from "react-native";
-import { Label } from "./ui/label";
-import { Text } from "./ui/text";
+import { Label } from "./label";
+import { Text } from "./text";
 
 export default function CameraInput({
   label,

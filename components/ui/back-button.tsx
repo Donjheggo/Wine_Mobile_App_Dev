@@ -1,4 +1,4 @@
-import { Button } from "./ui/button";
+import { Button } from "./button";
 import { Link } from "expo-router";
 import { CornerUpLeft } from "~/lib/icons/corner-up-left";
 
