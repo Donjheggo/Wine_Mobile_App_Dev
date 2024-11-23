@@ -9,7 +9,7 @@ export default function Index() {
   return (
     <SafeAreaView className="flex-1 bg-white">
       <ScrollView className="flex-1">
-        <View className="container max-w-md mx-auto p-4 flex-1 justify-center items-center">
+        <View className="container max-w-md mx-auto py-4 px-6 flex-1 justify-center items-center">
           <Image
             source={require("../assets/images/logo.png")}
             contentFit="contain"
