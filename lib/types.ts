@@ -17,3 +17,10 @@ export type RegisterStepTwoFormT = {
   invested_before: boolean;
   nearest_office: string;
 };
+
+export type RegisterStepThreeFormT = {
+  type_of_id: string;
+  id_number: string;
+  selfie_image: string;
+  id_image: string;
+};

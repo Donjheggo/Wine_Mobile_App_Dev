@@ -44,11 +44,9 @@ export default function Screen() {
       <BackButton />
       <View className="gap-10 mt-5">
         <Progress value={40} />
-        <View className="items-center">
-          <Text className="text-xl font-poppins-light">
-            We need to know your investment status at the moment.
-          </Text>
-        </View>
+        <Text className="text-xl text-center font-poppins-light">
+          We need to know your investment status at the moment.
+        </Text>
         <View className="gap-2">
           <Label>How much is your budget?</Label>
           <Select
@@ -62,7 +60,7 @@ export default function Screen() {
             <SelectTrigger>
               <SelectValue
                 className="text-foreground text-sm native:text-lg"
-                placeholder="1 - 5k"
+                placeholder={selections.budget[0]}
               />
             </SelectTrigger>
             <SelectContent>
@@ -89,7 +87,7 @@ export default function Screen() {
             <SelectTrigger>
               <SelectValue
                 className="text-foreground text-sm native:text-lg"
-                placeholder="5 years"
+                placeholder={selections.investment_time[0]}
               />
             </SelectTrigger>
             <SelectContent>
@@ -116,7 +114,7 @@ export default function Screen() {
             <SelectTrigger>
               <SelectValue
                 className="text-foreground text-sm native:text-lg"
-                placeholder="Yes"
+                placeholder={selections.invested_before[0].label}
               />
             </SelectTrigger>
             <SelectContent>
@@ -149,7 +147,7 @@ export default function Screen() {
             <SelectTrigger>
               <SelectValue
                 className="text-foreground text-sm native:text-lg"
-                placeholder="UK"
+                placeholder={selections.nearest_office[0]}
               />
             </SelectTrigger>
             <SelectContent>

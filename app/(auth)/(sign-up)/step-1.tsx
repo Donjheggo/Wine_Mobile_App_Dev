@@ -1,4 +1,4 @@
-import { View, KeyboardAvoidingView, Platform } from "react-native";
+import { View } from "react-native";
 import { Text } from "~/components/ui/text";
 import { Progress } from "~/components/ui/progress";
 import { Input } from "~/components/ui/input";
@@ -27,19 +27,17 @@ export default function Screen() {
       return;
     }
     // Add signup logic here
-    router.push("/(auth)/(sign-up)/step-2")
+    router.push("/(auth)/(sign-up)/step-2");
   };
 
   return (
     <View>
-      <BackButton/>
+      <BackButton />
       <View className="gap-10 mt-5">
         <Progress value={20} />
-        <View className="items-center">
-          <Text className="text-xl font-poppins-light">
-            We need your basic information for processing your transactions.
-          </Text>
-        </View>
+        <Text className="text-xl text-center font-poppins-light">
+          We need your basic information for processing your transactions.
+        </Text>
         <View className="gap-4">
           <View className="flex-row flex-wrap w-full gap-4">
             <View className="flex-1 w-[50%] gap-2">
