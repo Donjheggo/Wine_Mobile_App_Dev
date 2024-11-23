@@ -8,7 +8,11 @@ export default function SignupLayout() {
       className="flex-1"
       keyboardVerticalOffset={0}
     >
-      <ScrollView className="flex-1">
+      <ScrollView
+        className="flex-1"
+        keyboardShouldPersistTaps="handled"
+        showsVerticalScrollIndicator={false}
+      >
         <Slot />
       </ScrollView>
     </KeyboardAvoidingView>

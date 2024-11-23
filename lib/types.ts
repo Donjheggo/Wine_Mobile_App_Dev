@@ -10,3 +10,10 @@ export type RegisterStepOneFormT = {
   phone: string;
   password: string;
 };
+
+export type RegisterStepTwoFormT = {
+  budget: string;
+  investment_time: string;
+  invested_before: boolean;
+  nearest_office: string;
+};
