@@ -34,9 +34,11 @@ export default function Screen() {
           </Link>
         </Text>
       </View>
-      <Button size="lg" className="mt-36">
-        <Text>Recover</Text>
-      </Button>
+      <Link href="/(auth)/(mfa)/mfa-recovery-email-sent" asChild>
+        <Button size="lg" className="mt-36">
+          <Text>Recover</Text>
+        </Button>
+      </Link>
     </View>
   );
 }
