@@ -15,7 +15,7 @@ export default function Screen() {
         industry. Lorem Ipsum has been the industry's standard dummy text ever
         since the 1500s
       </Text>
-      <Link href="/" asChild>
+      <Link href="/(auth)/(mfa)/mfa-recovery-code-method" asChild>
         <TouchableOpacity>
           <View className="mt-14 flex-row items-center gap-2">
             <RectangleEllipsis
