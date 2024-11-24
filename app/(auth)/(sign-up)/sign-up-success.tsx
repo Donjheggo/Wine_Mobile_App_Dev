@@ -1,16 +1,16 @@
 import { View } from "react-native";
 import { Text } from "~/components/ui/text";
 import { CircleCheck } from "~/lib/icons/circle-check";
-import CustomLoader from "~/components/ui/loader";
 import { useEffect } from "react";
 import { router } from "expo-router";
+import CustomLoader from "~/components/ui/loader";
+import { Image } from "expo-image";
 
 export default function Screen() {
-
   // Will redirect to mfa screen after 2 seconds
   useEffect(() => {
     const redirectTimer = setTimeout(() => {
-      router.push("/(auth)/(sign-up)/(mfa)/mfa-1");
+      router.push("/(auth)/(sign-in)/sign-in");
     }, 2000);
 
     return () => clearTimeout(redirectTimer);
@@ -18,6 +18,13 @@ export default function Screen() {
 
   return (
     <View>
+      <View className="items-center">
+        <Image
+          source={require("~/assets/images/logo.png")}
+          contentFit="contain"
+          style={{ width: 300, height: 300 }}
+        />
+      </View>
       <Text className="text-center text-xl">
         Successfully created an account!
       </Text>
