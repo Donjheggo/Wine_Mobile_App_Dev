@@ -31,3 +31,11 @@ export type RegisterStepFourFormT = {
   expiry_date: string | Date;
   cvc: string;
 };
+
+export type CameraInputPropsT = {
+  label: string;
+  description: string;
+  image_uri?: string;
+  icon: React.ElementType;
+  onActivate: () => void;
+};

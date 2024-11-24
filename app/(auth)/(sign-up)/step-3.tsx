@@ -6,7 +6,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "~/components/ui/select";
-import { View, Modal } from "react-native";
+import { View } from "react-native";
 import { Text } from "~/components/ui/text";
 import { Progress } from "~/components/ui/progress";
 import { Label } from "~/components/ui/label";
@@ -15,20 +15,13 @@ import { useState } from "react";
 import { Camera } from "~/lib/icons/camera";
 import { IdCard } from "~/lib/icons/id-card";
 import { Button } from "~/components/ui/button";
-import { CameraView, CameraType, useCameraPermissions } from "expo-camera";
-import { SwitchCamera } from "~/lib/icons/switch-camera";
-import { X } from "~/lib/icons/x";
-import type { RegisterStepThreeFormT } from "~/lib/types";
 import BackButton from "~/components/ui/back-button";
 import CameraInput from "~/components/ui/camera-input";
 import { Link } from "expo-router";
+import type { RegisterStepThreeFormT } from "~/lib/types";
+import * as ImagePicker from "expo-image-picker";
 
 export default function Screen() {
-  const [facing, setFacing] = useState<CameraType>("back");
-  const [permission, requestPermission] = useCameraPermissions();
-  const [activeCamera, setActiveCamera] = useState<"selfie" | "id" | null>(
-    null
-  );
   const [form, setForm] = useState<RegisterStepThreeFormT>({
     type_of_id: "",
     id_number: "",
@@ -36,32 +29,16 @@ export default function Screen() {
     id_image: "",
   });
 
-  const toggleCameraFacing = () => {
-    setFacing((current) => (current === "back" ? "front" : "back"));
-  };
-
-  const closeCamera = () => setActiveCamera(null);
-
-  if (!permission) {
-    // Camera permissions are still loading.
-    return <View />;
-  }
-
-  const captureImage = async () => {
-    // Add expo-camera logic for capturing image
-    let uri = "";
-
-    setForm((prevState) => {
-      if (activeCamera === "selfie") {
-        return { ...prevState, selfie_image: uri };
-      }
-      if (activeCamera === "id") {
-        return { ...prevState, id_image: uri };
-      }
-      return prevState;
+  const pickImage = async (field: "selfie_image" | "id_image") => {
+    // No permissions request is necessary for launching the image library
+    let result = await ImagePicker.launchImageLibraryAsync({
+      mediaTypes: ["images"],
+      quality: 1,
     });
 
-    closeCamera();
+    if (!result.canceled) {
+      setForm({ ...form, [field]: result.assets[0].uri });
+    }
   };
 
   return (
@@ -115,74 +92,24 @@ export default function Screen() {
           </View>
         </View>
 
-        {!permission.granted ? (
-          <View>
-            <Text className="text-center">
-              We need your permission to show the camera
-            </Text>
-            <Button
-              onPress={requestPermission}
-              variant="outline"
-              className="mt-4"
-            >
-              <Text>Grant Permission</Text>
-            </Button>
-          </View>
-        ) : (
-          <View className="gap-6">
-            {/* Camera input for selfie */}
-            <CameraInput
-              label="Take a selfie"
-              description="To match your face to your ID photo."
-              icon={Camera}
-              onActivate={() => setActiveCamera("selfie")}
-            />
+        <View className="gap-6">
+          <CameraInput
+            label="Upload a selfie"
+            description="To match your face to your ID photo."
+            image_uri={form.selfie_image}
+            icon={Camera}
+            onActivate={() => pickImage("selfie_image")}
+          />
 
-            {/* Camera input for ID */}
-            <CameraInput
-              label="Take a picture of your valid ID."
-              description="To verify your identity matches the ID."
-              icon={IdCard}
-              onActivate={() => setActiveCamera("id")}
-            />
-          </View>
-        )}
+          <CameraInput
+            label="Upload a picture of your valid ID."
+            description="To verify your identity matches the ID."
+            image_uri={form.id_image}
+            icon={IdCard}
+            onActivate={() => pickImage("id_image")}
+          />
+        </View>
 
-        {activeCamera && (
-          <Modal visible={true} animationType="slide">
-            <View className="flex-1">
-              <CameraView facing={facing} style={{ flex: 1 }}>
-                {/* Close Button */}
-                <Button
-                  size="icon"
-                  variant="ghost"
-                  onPress={closeCamera}
-                  className="absolute top-20 left-5"
-                >
-                  <X className="text-primary" size={35} />
-                </Button>
-                {/* Switch Camera Button */}
-                <Button
-                  size="icon"
-                  className="absolute top-20 right-5"
-                  variant="ghost"
-                  onPress={toggleCameraFacing}
-                >
-                  <SwitchCamera className="text-primary" size={35} />
-                </Button>
-                {/* Capture Button */}
-                <Button
-                  onPress={captureImage}
-                  size="icon"
-                  variant="ghost"
-                  className="w-full absolute bottom-10 left-0 right-0"
-                >
-                  <Camera className="text-primary" size={35} />
-                </Button>
-              </CameraView>
-            </View>
-          </Modal>
-        )}
         <Link href="/(auth)/(sign-up)/step-4" asChild>
           <Button size="lg" className="mt-10">
             <Text>Next</Text>
