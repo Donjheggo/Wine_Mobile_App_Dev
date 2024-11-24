@@ -2,8 +2,20 @@ import { View } from "react-native";
 import { Text } from "~/components/ui/text";
 import { CircleCheck } from "~/lib/icons/circle-check";
 import CustomLoader from "~/components/ui/loader";
+import { useEffect } from "react";
+import { router } from "expo-router";
 
 export default function Screen() {
+
+  // Will redirect to mfa screen after 2 seconds
+  useEffect(() => {
+    const redirectTimer = setTimeout(() => {
+      router.push("/(auth)/(sign-up)/(mfa)/mfa-1");
+    }, 2000);
+
+    return () => clearTimeout(redirectTimer);
+  });
+
   return (
     <View>
       <Text className="text-center text-xl">
