@@ -21,6 +21,7 @@ import { X } from "~/lib/icons/x";
 import type { RegisterStepThreeFormT } from "~/lib/types";
 import BackButton from "~/components/ui/back-button";
 import CameraInput from "~/components/ui/camera-input";
+import { Link } from "expo-router";
 
 export default function Screen() {
   const [facing, setFacing] = useState<CameraType>("back");
@@ -182,10 +183,11 @@ export default function Screen() {
             </View>
           </Modal>
         )}
-
-        <Button size="lg" className="mt-10">
-          <Text>Next</Text>
-        </Button>
+        <Link href="/(auth)/(sign-up)/step-4" asChild>
+          <Button size="lg" className="mt-10">
+            <Text>Next</Text>
+          </Button>
+        </Link>
       </View>
     </View>
   );
