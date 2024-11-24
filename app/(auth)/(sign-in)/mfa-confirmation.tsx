@@ -12,7 +12,7 @@ export default function Screen() {
   const [sixDigitCode, setSixDigitCode] = useState<string>();
 
   return (
-    <View>
+    <View className="mt-20">
       <View className="gap-2">
         <Label className="text-center">
           Enter the <Text className="text-primary">6 digit code</Text> from your
@@ -39,7 +39,7 @@ export default function Screen() {
         </Text>
       </View>
       <View className="mt-36">
-        <Link href="/(auth)/sign-in" asChild>
+        <Link href="/" asChild>
           <Button size="lg" className="mt-10">
             <Text>Login</Text>
           </Button>
