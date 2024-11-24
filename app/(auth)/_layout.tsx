@@ -1,4 +1,4 @@
-import { SafeAreaView, ScrollView, View } from "react-native";
+import { SafeAreaView, View } from "react-native";
 import { Slot } from "expo-router";
 
 export default function AuthLayout() {

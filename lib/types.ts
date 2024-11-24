@@ -24,3 +24,10 @@ export type RegisterStepThreeFormT = {
   selfie_image: string;
   id_image: string;
 };
+
+export type RegisterStepFourFormT = {
+  full_name: string;
+  card_number: string;
+  expiry_date: string | Date;
+  cvc: string;
+};

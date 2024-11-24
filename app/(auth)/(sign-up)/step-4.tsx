@@ -31,7 +31,7 @@ export default function Screen() {
             source={require("../../../assets/images/qr-code.png")}
             style={{ width: 150, height: 150 }}
           />
-          <View className="mt-10 gap-4">
+          <View className="mt-10 gap-4 w-full">
             <Label>
               Enter the <Text className="text-primary">6 digit code</Text> from
               your authenticator
@@ -43,16 +43,18 @@ export default function Screen() {
               onChangeText={(e) => setSixDigitCode(e)}
               className="text-center"
             />
-            <Text className="text-muted-foreground text-xs">
-              Lost access to your Authenticator?{" "}
-              <Link href="/" className="underline text-primary">
-                Contact us
-              </Link>{" "}
-              or{" "}
-              <Link href="/" className="underline">
-                Recover it
-              </Link>
-            </Text>
+            <View>
+              <Text className="text-muted-foreground text-xs">
+                Lost access to your Authenticator?{" "}
+                <Link href="/" className="underline text-primary">
+                  Contact us
+                </Link>{" "}
+                or{" "}
+                <Link href="/" className="underline">
+                  Recover it
+                </Link>
+              </Text>
+            </View>
             <Link href="/(auth)/(sign-up)/step-5" asChild>
               <Button size="lg" className="mt-10">
                 <Text>Next</Text>
