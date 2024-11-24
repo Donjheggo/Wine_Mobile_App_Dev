@@ -1,11 +1,9 @@
-import { View, Animated, Easing } from "react-native";
+import { View } from "react-native";
 import { Text } from "~/components/ui/text";
 import { CircleCheck } from "~/lib/icons/circle-check";
 import CustomLoader from "~/components/ui/loader";
 
 export default function Screen() {
-  // Create a new Animated.Value for rotation
-
   return (
     <View>
       <Text className="text-center text-xl">
