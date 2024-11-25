@@ -12,7 +12,7 @@ export default function NotificationButton({ count }: { count: number }) {
             <Text className="text-white text-xs">{count}</Text>
           </View>
         )}
-        <Bell color="#8e8e8f" size={30} strokeWidth={1.7} />
+        <Bell color="#8e8e8f" size={25} strokeWidth={1.7} />
       </View>
     </Link>
   );

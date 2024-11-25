@@ -17,10 +17,10 @@ export default function TabScreens() {
         headerRight: () => <TabsRightHeader />, // Right header buttons
         tabBarActiveTintColor: "#b65b42", // Active icon color
         headerStyle: {
-          height: 120, // Height of header
+          height: 110, // Height of header
         },
         headerRightContainerStyle: {
-          paddingTop: 16, // Padding of right header
+          paddingTop: 10, // Padding of right header
         },
       }}
     >

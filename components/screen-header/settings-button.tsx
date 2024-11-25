@@ -1,4 +1,4 @@
-import { View, Pressable } from "react-native";
+import { Pressable } from "react-native";
 import { Link } from "expo-router";
 import { Image } from "expo-image";
 
@@ -9,7 +9,7 @@ export default function SettingsButton() {
         <Image
           source={require("~/assets/images/user-placeholder.jpg")}
           contentFit="contain"
-          style={{ width: 40, height: 40 }}
+          style={{ width: 30, height: 30 }}
         />
       </Pressable>
     </Link>

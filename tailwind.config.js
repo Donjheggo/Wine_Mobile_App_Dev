@@ -8,11 +8,11 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        "poppins-light": ["Light", "sans-serif"],
-        "poppins-regular": ["Regular", "sans-serif"],
-        "poppins-medium": ["Medium", "sans-serif"],
-        "poppins-semibold": ["SemiBold", "sans-serif"],
-        "poppins-bold": ["Bold", "sans-serif"],
+        "poppins-light": ["Light"],
+        "poppins-regular": ["Regular"],
+        "poppins-medium": ["Medium"],
+        "poppins-semibold": ["SemiBold"],
+        "poppins-bold": ["Bold"],
       },
       colors: {
         border: "hsl(var(--border))",

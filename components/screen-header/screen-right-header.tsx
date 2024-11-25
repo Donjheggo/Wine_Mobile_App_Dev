@@ -5,7 +5,7 @@ import SettingsButton from "./settings-button";
 
 export default function TabsRightHeader() {
   return (
-    <View className="flex-row gap-4 px-4 items-center mb-5">
+    <View className="flex-row gap-5 px-4 items-center mb-5">
       <NotificationButton count={3} />
       <CartButton count={8} />
       <SettingsButton />

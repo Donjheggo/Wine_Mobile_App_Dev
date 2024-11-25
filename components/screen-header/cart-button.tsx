@@ -12,7 +12,7 @@ export default function CartButton({ count }: { count: number }) {
             <Text className="text-white text-xs">{count}</Text>
           </View>
         )}
-        <ShoppingCart color="#8e8e8f" size={30} strokeWidth={1.7} />
+        <ShoppingCart color="#8e8e8f" size={25} strokeWidth={1.7} />
       </View>
     </Link>
   );

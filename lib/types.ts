@@ -1,3 +1,6 @@
+import type { LucideIcon } from "lucide-react-native";
+import type { ImageSourcePropType } from "react-native";
+
 export type LoginFormT = {
   email: string;
   password: string;
@@ -38,4 +41,16 @@ export type CameraInputPropsT = {
   image_uri?: string;
   icon: React.ElementType;
   onActivate: () => void;
+};
+
+export type SettingLinksCardPropsT = {
+  name: string;
+  Icon: LucideIcon;
+  href: any;
+};
+
+export type SubAccountsCardPropsT = {
+  image: string | ImageSourcePropType;
+  first_name: string;
+  last_name: string;
 };
