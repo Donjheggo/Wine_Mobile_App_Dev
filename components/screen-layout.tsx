@@ -1,0 +1,15 @@
+import { SafeAreaView, ScrollView } from "react-native";
+
+export default function ScreenLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <SafeAreaView className="h-full bg-white">
+      <ScrollView className="flex-1 container max-w-screen-xl mx-auto py-4 px-6">
+        {children}
+      </ScrollView>
+    </SafeAreaView>
+  );
+}
