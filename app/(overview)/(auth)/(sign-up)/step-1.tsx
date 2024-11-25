@@ -27,7 +27,7 @@ export default function Screen() {
       return;
     }
     // Add signup logic here
-    router.push("/(auth)/(sign-up)/step-2");
+    router.push("/(overview)/(auth)/(sign-up)/step-2");
   };
 
   return (
@@ -121,12 +121,12 @@ export default function Screen() {
           </View>
           <View className="flex flex-row items-center justify-center gap-4">
             <Image
-              source={require("../../../assets/icons/facebook.svg")}
+              source={require("~/assets/icons/facebook.svg")}
               contentFit="contain"
               style={{ width: 40, height: 40 }}
             />
             <Image
-              source={require("../../../assets/icons/google.png")}
+              source={require("~/assets/icons/google.png")}
               contentFit="contain"
               style={{ width: 40, height: 50 }}
             />

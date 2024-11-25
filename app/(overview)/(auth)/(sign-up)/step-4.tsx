@@ -28,7 +28,7 @@ export default function Screen() {
         <View className="items-center">
           <Image
             contentFit="fill"
-            source={require("../../../assets/images/qr-code.png")}
+            source={require("~/assets/images/qr-code.png")}
             style={{ width: 150, height: 150 }}
           />
           <View className="mt-10 gap-4 w-full">
@@ -55,7 +55,7 @@ export default function Screen() {
                 </Link>
               </Text>
             </View>
-            <Link href="/(auth)/(sign-up)/step-5" asChild>
+            <Link href="/(overview)/(auth)/(sign-up)/step-5" asChild>
               <Button size="lg" className="mt-10">
                 <Text>Next</Text>
               </Button>

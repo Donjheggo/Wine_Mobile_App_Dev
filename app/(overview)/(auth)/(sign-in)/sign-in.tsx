@@ -1,7 +1,6 @@
-import { View, ScrollView } from "react-native";
+import { View } from "react-native";
 import { Text } from "~/components/ui/text";
 import { Button } from "~/components/ui/button";
-import { Image } from "expo-image";
 import { Input } from "~/components/ui/input";
 import { Label } from "~/components/ui/label";
 import { useState } from "react";
@@ -17,7 +16,7 @@ export default function Signin() {
 
   const handleSubmit = async () => {
     // Add signing in logic here
-    router.push("/(auth)/(sign-in)/mfa-confirmation");
+    router.push("/(overview)/(auth)/(sign-in)/mfa-confirmation");
   };
 
   return (
@@ -56,7 +55,7 @@ export default function Signin() {
         </Button>
         <Text className="text-sm mt-3 text-muted-foreground">
           You don't have an account yet?{" "}
-          <Link href="/(auth)/(sign-up)/step-1" className="text-blue-500">
+          <Link href="/(overview)/(auth)/(sign-up)/step-1" className="text-blue-500">
             Create an account here
           </Link>
         </Text>

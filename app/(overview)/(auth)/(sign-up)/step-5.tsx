@@ -33,7 +33,7 @@ export default function Screen() {
         </Text>
         <View className="items-center">
           <Image
-            source={require("../../../assets/images/card.png")}
+            source={require("~/assets/images/card.png")}
             contentFit="contain"
             style={{ width: 200, height: 200 }}
           />
@@ -78,7 +78,7 @@ export default function Screen() {
             </View>
           </View>
         </View>
-        <Link href="/(auth)/(sign-up)/sign-up-success" asChild>
+        <Link href="/(overview)/(auth)/(sign-up)/sign-up-success" asChild>
           <Button size="lg" className="mt-10">
             <Text>Create Account</Text>
           </Button>

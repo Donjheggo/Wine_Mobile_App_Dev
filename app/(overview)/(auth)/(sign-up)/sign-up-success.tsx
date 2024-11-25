@@ -10,7 +10,7 @@ export default function Screen() {
   // Will redirect to sign-in screen after 2 seconds
   useEffect(() => {
     const redirectTimer = setTimeout(() => {
-      router.push("/(auth)/(sign-in)/sign-in");
+      router.push("/(overview)/(auth)/(sign-in)/sign-in");
     }, 2000);
 
     return () => clearTimeout(redirectTimer);
