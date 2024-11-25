@@ -16,7 +16,7 @@ export default function Signin() {
 
   const handleSubmit = async () => {
     // Add signing in logic here
-    router.push("/(overview)/(auth)/(sign-in)/mfa-confirmation");
+    router.push("/(auth)/(sign-in)/mfa-confirmation");
   };
 
   return (
@@ -55,7 +55,7 @@ export default function Signin() {
         </Button>
         <Text className="text-sm mt-3 text-muted-foreground">
           You don't have an account yet?{" "}
-          <Link href="/(overview)/(auth)/(sign-up)/step-1" className="text-blue-500">
+          <Link href="/(auth)/(sign-up)/step-1" className="text-blue-500">
             Create an account here
           </Link>
         </Text>

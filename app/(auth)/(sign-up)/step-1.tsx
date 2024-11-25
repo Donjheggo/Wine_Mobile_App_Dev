@@ -27,7 +27,7 @@ export default function Screen() {
       return;
     }
     // Add signup logic here
-    router.push("/(overview)/(auth)/(sign-up)/step-2");
+    router.push("/(auth)/(sign-up)/step-2");
   };
 
   return (

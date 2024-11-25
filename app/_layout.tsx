@@ -21,12 +21,8 @@ export default function RootLayout() {
     <>
       <StatusBar style="dark" />
       <Stack screenOptions={{ headerShown: false }}>
-        <Stack.Screen
-          name="index"
-          options={{
-            title: "",
-          }}
-        />
+        <Stack.Screen name="index" />
+        <Stack.Screen name="(tabs)" />
       </Stack>
       <PortalHost />
     </>

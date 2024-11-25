@@ -36,7 +36,7 @@ export default function Screen() {
 
   const handleSubmit = async () => {
     // add logic here
-    router.push("/(overview)/(auth)/(sign-up)/step-3");
+    router.push("/(auth)/(sign-up)/step-3");
   };
 
   return (

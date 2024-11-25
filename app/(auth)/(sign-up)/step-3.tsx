@@ -110,7 +110,7 @@ export default function Screen() {
           />
         </View>
 
-        <Link href="/(overview)/(auth)/(sign-up)/step-4" asChild>
+        <Link href="/(auth)/(sign-up)/step-4" asChild>
           <Button size="lg" className="mt-10">
             <Text>Next</Text>
           </Button>

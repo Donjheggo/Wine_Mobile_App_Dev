@@ -7,9 +7,15 @@ import { Text } from "~/components/ui/text";
 import { useState } from "react";
 import { Separator } from "~/components/ui/separator";
 import { Image } from "expo-image";
+import { router } from "expo-router";
 
 export default function Screen() {
   const [sixDigitCode, setSixDigitCode] = useState<string>();
+
+  const handleSubmit = async () => {
+    // Add confirmation validation here
+    router.push("/(tabs)/dashboard");
+  };
 
   return (
     <View className="mt-20">
@@ -33,17 +39,15 @@ export default function Screen() {
             Contact us
           </Link>{" "}
           or{" "}
-          <Link href="/(overview)/(auth)/(mfa)/mfa-recovery-methods" className="underline">
+          <Link href="/(auth)/(mfa)/mfa-recovery-methods" className="underline">
             Recover it
           </Link>
         </Text>
       </View>
       <View className="mt-36">
-        <Link href="/" asChild>
-          <Button size="lg" className="mt-10">
-            <Text>Login</Text>
-          </Button>
-        </Link>
+        <Button onPress={handleSubmit} size="lg" className="mt-10">
+          <Text>Login</Text>
+        </Button>
         <View className="mt-6 flex flex-row gap-4 items-center justify-center w-full">
           <Separator className="my-4" />
           <Text className="text-gray-400">OR</Text>
