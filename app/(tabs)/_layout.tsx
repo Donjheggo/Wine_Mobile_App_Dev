@@ -5,8 +5,8 @@ import { SearchCheck } from "~/lib/icons/search-check";
 import { ChartNoAxesCombined } from "~/lib/icons/chart-no-axes-combined";
 import { Wine } from "~/lib/icons/wine";
 import { ChartPie } from "~/lib/icons/chart-pie";
-import TabsLeftHeader from "~/components/tabs/tabs-left-header";
-import TabsRightHeader from "~/components/tabs/tabs-right-header";
+import TabsLeftHeader from "~/components/screen-header/screen-left-header";
+import TabsRightHeader from "~/components/screen-header/screen-right-header";
 
 export default function TabScreens() {
   return (
@@ -64,6 +64,24 @@ export default function TabScreens() {
         options={{
           title: "Indicies",
           tabBarIcon: ({ color }) => <ChartNoAxesCombined color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="notification"
+        options={{
+          href: null,
+        }}
+      />
+      <Tabs.Screen
+        name="cart"
+        options={{
+          href: null,
+        }}
+      />
+      <Tabs.Screen
+        name="settings"
+        options={{
+          href: null,
         }}
       />
     </Tabs>

@@ -7,7 +7,7 @@ export default function ScreenLayout({
 }) {
   return (
     <SafeAreaView className="h-full bg-white">
-      <ScrollView className="flex-1 container max-w-screen-xl mx-auto py-4 px-6">
+      <ScrollView className="flex-1 container max-w-screen-xl mx-auto py-4 px-4">
         {children}
       </ScrollView>
     </SafeAreaView>
