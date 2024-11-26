@@ -1,13 +1,13 @@
-import { Button } from "./button";
 import { Link } from "expo-router";
 import { CornerUpLeft } from "~/lib/icons/corner-up-left";
+import { Pressable } from "react-native";
 
 export default function BackButton() {
   return (
     <Link href="../" asChild>
-      <Button variant="ghost" size="icon">
+      <Pressable>
         <CornerUpLeft className="text-primary" />
-      </Button>
+      </Pressable>
     </Link>
   );
 }

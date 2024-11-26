@@ -1,4 +1,5 @@
 import type { LucideIcon } from "lucide-react-native";
+import type { ElementType } from "react";
 import type { ImageSourcePropType } from "react-native";
 
 export type LoginFormT = {
@@ -61,4 +62,10 @@ export type ActivityDialogPropsT = {
   date: Date;
   price: number;
   type: string;
+};
+
+export type TabsT = {
+  file_name: string;
+  title: string | null;
+  icon: ElementType | null;
 };
