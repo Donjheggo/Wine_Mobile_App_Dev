@@ -1,6 +1,6 @@
 import SettingLinkCard from "~/components/settings/setting-links-card";
-import SubAccountCard from "~/components/settings/sub-account-card";
-import AddSubAccountButton from "~/components/settings/add-sub-account-button";
+import SubAccountCard from "~/components/settings/sub-account/sub-account-card";
+import AddSubAccountButton from "~/components/settings/sub-account/add-sub-account-button";
 import { Text } from "~/components/ui/text";
 import { View } from "react-native";
 import { SettingLinks } from "~/lib/settings-links";

@@ -69,3 +69,11 @@ export type TabsT = {
   title: string | null;
   icon: ElementType | null;
 };
+
+export type AddSubAccountFormT = {
+  first_name: string;
+  last_name: string;
+  birth_date: Date;
+  email: string;
+  phone: string;
+};

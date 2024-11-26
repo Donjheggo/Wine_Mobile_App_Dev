@@ -78,7 +78,7 @@ export default function Screen() {
             </View>
           </View>
         </View>
-        <Link href="/(auth)/(sign-up)/sign-up-success" asChild>
+        <Link href="/(success-screens)/sign-up-success" asChild>
           <Button size="lg" className="mt-10">
             <Text>Create Account</Text>
           </Button>
