@@ -1,6 +1,6 @@
 import type { LucideIcon } from "lucide-react-native";
-import type { ElementType } from "react";
 import type { ImageSourcePropType } from "react-native";
+import type { ElementType } from "react";
 
 export type LoginFormT = {
   email: string;
