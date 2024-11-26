@@ -54,3 +54,11 @@ export type SubAccountsCardPropsT = {
   first_name: string;
   last_name: string;
 };
+
+export type ActivityDialogPropsT = {
+  image: any;
+  activity: string;
+  date: Date;
+  price: number;
+  type: string;
+};

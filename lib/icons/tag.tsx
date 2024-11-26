@@ -1,0 +1,4 @@
+import { Tag } from "lucide-react-native";
+import { iconWithClassName } from "./icons-with-classname";
+iconWithClassName(Tag);
+export { Tag };
