@@ -1,5 +1,5 @@
-import TabsRightHeader from "~/components/screen-header/screen-right-header";
-import TabsLeftHeader from "~/components/screen-header/screen-left-header";
+import TabsRightHeader from "~/components/layout/screen-header/screen-right-header";
+import TabsLeftHeader from "~/components/layout/screen-header/screen-left-header";
 import BackButton from "~/components/ui/back-button";
 import { Tabs } from "expo-router";
 import { tabs } from "~/lib/tabs";

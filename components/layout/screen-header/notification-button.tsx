@@ -1,7 +1,7 @@
 import { Link } from "expo-router";
 import { View } from "react-native";
 import { Bell } from "~/lib/icons/bell";
-import { Text } from "../ui/text";
+import { Text } from "../../ui/text";
 
 export default function NotificationButton({ count }: { count: number }) {
   return (

@@ -1,10 +1,10 @@
 import { Button } from "~/components/ui/button";
-import { Menu } from "~/lib/icons/menu";
+import { SlidersHorizontal } from "~/lib/icons/sliders-horizontal";
 
 export default function SortButton() {
   return (
     <Button size="icon" variant="ghost">
-      <Menu className="text-muted-foreground" size={35}/>
+      <SlidersHorizontal className="text-muted-foreground" size={35} />
     </Button>
   );
 }

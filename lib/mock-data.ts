@@ -94,3 +94,36 @@ export const MockActivites: ActivityDialogPropsT[] = [
     price: 70,
   },
 ];
+
+export const MockBillingHistory = [
+  {
+    lwin: "10062052020",
+    card_end: "2046",
+    amount: 100,
+  },
+  {
+    lwin: "10062052020",
+    card_end: "2046",
+    amount: 100,
+  },
+  {
+    lwin: "10062052020",
+    card_end: "2046",
+    amount: 100,
+  },
+  {
+    lwin: "10062052020",
+    card_end: "2046",
+    amount: 100,
+  },
+  {
+    lwin: "10062052020",
+    card_end: "2046",
+    amount: 100,
+  },
+  {
+    lwin: "10062052020",
+    card_end: "2046",
+    amount: 100,
+  },
+];

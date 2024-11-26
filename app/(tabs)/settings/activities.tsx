@@ -1,6 +1,6 @@
-import FilterButton from "~/components/settings/activities/filter-button";
-import SearchInput from "~/components/settings/activities/search-input";
-import SortButton from "~/components/settings/activities/sort-button";
+import FilterButton from "~/components/ui/filter-button";
+import SearchInput from "~/components/ui/search-input";
+import SortButton from "~/components/ui/sort-button";
 import ActivitiesTable from "~/components/settings/activities/activities-table";
 import { View } from "react-native";
 import { Text } from "~/components/ui/text";
@@ -17,18 +17,18 @@ export default function Screen() {
   );
 
   return (
-    <View>
+    <View className="gap-3">
       <Text className="text-xl font-poppins-medium">Activities</Text>
-      <View className="flex-row ml-auto mt-2 gap-2">
+      <View className="flex-row ml-auto gap-2">
         {filters.map((item, index) => (
           <FilterButton key={index} filterQuery={item} />
         ))}
       </View>
-      <View className="mt-4 flex-row gap-2 items-center justify-between">
+      <View className=" flex-row gap-2 items-center justify-between">
         <SearchInput />
         <SortButton />
       </View>
-      <View className="mt-4">
+      <View className="">
         <ActivitiesTable />
       </View>
     </View>

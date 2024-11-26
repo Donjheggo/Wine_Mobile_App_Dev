@@ -1,7 +1,7 @@
 import { Link } from "expo-router";
 import { View } from "react-native";
 import { ShoppingCart } from "~/lib/icons/shopping-cart";
-import { Text } from "../ui/text";
+import { Text } from "../../ui/text";
 
 export default function CartButton({ count }: { count: number }) {
   return (

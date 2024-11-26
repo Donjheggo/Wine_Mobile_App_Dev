@@ -1,4 +1,4 @@
-import ScreenLayout from "~/components/screen-layout";
+import ScreenLayout from "~/components/layout/screen-layout";
 import { Slot } from "expo-router";
 
 export default function SettingsLayout() {
