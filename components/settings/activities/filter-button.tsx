@@ -13,7 +13,7 @@ export default function FilterButton({ filterQuery }: { filterQuery: string }) {
   };
 
   // Check the current filter
-  const isSelected = params.filter === filterQuery.toLowerCase();
+  const isSelected = params.filter?.toLowerCase() === filterQuery.toLowerCase();
 
   return (
     <Button

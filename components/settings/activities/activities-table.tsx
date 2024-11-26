@@ -17,7 +17,6 @@ import { Gift } from "~/lib/icons/gift";
 import { Truck } from "~/lib/icons/truck";
 import { truncateText } from "~/lib/utils";
 import ActivityDialog from "./activity-dialog";
-import { ScrollView } from "react-native";
 
 export default function ActivitiesTable() {
   const { width } = useWindowDimensions();
