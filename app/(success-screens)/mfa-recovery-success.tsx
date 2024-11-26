@@ -3,6 +3,7 @@ import { Text } from "~/components/ui/text";
 import { CircleCheck } from "~/lib/icons/circle-check";
 import { useEffect } from "react";
 import { router } from "expo-router";
+import { Image } from "expo-image";
 import CustomLoader from "~/components/ui/loader";
 
 export default function Screen() {
@@ -17,6 +18,13 @@ export default function Screen() {
 
   return (
     <View>
+      <View className="items-center">
+        <Image
+          source={require("~/assets/images/logo.png")}
+          contentFit="contain"
+          style={{ width: 300, height: 200 }}
+        />
+      </View>
       <Text className="text-xl text-center font-poppins-light">
         Recovery Success!
       </Text>

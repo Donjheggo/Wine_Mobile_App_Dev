@@ -5,9 +5,21 @@ import { Label } from "~/components/ui/label";
 import { Input } from "~/components/ui/input";
 import { Button } from "~/components/ui/button";
 import { useState } from "react";
+import { router } from "expo-router";
 
 export default function Screen() {
   const [email, setEmail] = useState<string>("");
+
+  const handleSubmit = () => {
+    try {
+      // Add function here
+      router.push("/(auth)/(mfa)/mfa-recovery-email-sent");
+    } catch (error) {
+      console.error(error);
+      return;
+    }
+    return;
+  };
 
   return (
     <View>
@@ -34,11 +46,9 @@ export default function Screen() {
           </Link>
         </Text>
       </View>
-      <Link href="/(auth)/(mfa)/mfa-recovery-email-sent" asChild>
-        <Button size="lg" className="mt-36">
-          <Text>Recover</Text>
-        </Button>
-      </Link>
+      <Button onPress={handleSubmit} size="lg" className="mt-36">
+        <Text>Recover</Text>
+      </Button>
     </View>
   );
 }
