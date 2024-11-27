@@ -83,3 +83,12 @@ export type SupportDefaultFormT = {
   last_name: string;
   inquiry: string;
 };
+
+export type NotificationCardT = {
+  image: string | ImageSourcePropType;
+  title: string;
+  desc: string;
+  date: Date;
+  price: number;
+  responded: boolean;
+};

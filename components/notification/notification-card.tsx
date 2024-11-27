@@ -3,6 +3,7 @@ import { Image } from "expo-image";
 import { Link } from "expo-router";
 import { View } from "react-native";
 import { Text } from "../ui/text";
+import type { NotificationCardT } from "~/lib/types";
 
 export default function NotificationCard({
   image,
@@ -11,7 +12,7 @@ export default function NotificationCard({
   date,
   price,
   responded,
-}: any) {
+}: NotificationCardT) {
   return (
     <View
       className={`${
