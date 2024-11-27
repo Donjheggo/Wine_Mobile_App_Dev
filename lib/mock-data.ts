@@ -127,3 +127,103 @@ export const MockBillingHistory = [
     amount: 100,
   },
 ];
+
+export const MockNotifications = [
+  {
+    id: "10135442015",
+    sale: 20,
+    price: 3286.52,
+    description:
+      "Lorem  ipsum odor amet, consectetuer adipiscing elit. Per vestibulum commodo sit donec non tellus vel. Aptent et mauris ac potenti, ridiculus natoque. Venenatis vestibulum maximus duis facilisi nec dictumst. Ac sociosqu suscipit molestie urna adipiscing per. Egestas vehicula class velit vulputate tempor adipiscing? Malesuada velit tempor praesent hendrerit tellus luctus auctor purus.",
+    image: require("~/assets/images/wine.png"),
+    title: "LWIN: 1504500 negotiated to £450",
+    desc: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+    date: (() => {
+      const date = new Date();
+      date.setDate(date.getDate() - 1); // 1 day ago
+      return date;
+    })(),
+
+    responded: true,
+  },
+  {
+    id: "10135442015",
+    sale: 20,
+    price: 3286.52,
+    description:
+      "Lorem  ipsum odor amet, consectetuer adipiscing elit. Per vestibulum commodo sit donec non tellus vel. Aptent et mauris ac potenti, ridiculus natoque. Venenatis vestibulum maximus duis facilisi nec dictumst. Ac sociosqu suscipit molestie urna adipiscing per. Egestas vehicula class velit vulputate tempor adipiscing? Malesuada velit tempor praesent hendrerit tellus luctus auctor purus.",
+    image: require("~/assets/images/wine.png"),
+    title: "New wine LWIN: 10101 on Market",
+    desc: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+    date: (() => {
+      const date = new Date();
+      date.setDate(date.getDate() - 2); // 2 days ago
+      return date;
+    })(),
+    responded: false,
+  },
+  {
+    id: "10135442015",
+    sale: 20,
+    price: 3286.52,
+    description:
+      "Lorem  ipsum odor amet, consectetuer adipiscing elit. Per vestibulum commodo sit donec non tellus vel. Aptent et mauris ac potenti, ridiculus natoque. Venenatis vestibulum maximus duis facilisi nec dictumst. Ac sociosqu suscipit molestie urna adipiscing per. Egestas vehicula class velit vulputate tempor adipiscing? Malesuada velit tempor praesent hendrerit tellus luctus auctor purus.",
+    image: require("~/assets/images/wine.png"),
+    title: "New wine LWIN: 10101 on Market",
+    desc: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+    date: (() => {
+      const date = new Date();
+      date.setDate(date.getDate() - 3); // 3 days ago
+      return date;
+    })(),
+    responded: false,
+  },
+  {
+    id: "10135442015",
+    sale: 20,
+    price: 3286.52,
+    description:
+      "Lorem  ipsum odor amet, consectetuer adipiscing elit. Per vestibulum commodo sit donec non tellus vel. Aptent et mauris ac potenti, ridiculus natoque. Venenatis vestibulum maximus duis facilisi nec dictumst. Ac sociosqu suscipit molestie urna adipiscing per. Egestas vehicula class velit vulputate tempor adipiscing? Malesuada velit tempor praesent hendrerit tellus luctus auctor purus.",
+    image: require("~/assets/images/wine.png"),
+    title: "New wine LWIN: 10101 on Market",
+    desc: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+    date: (() => {
+      const date = new Date();
+      date.setDate(date.getDate() - 8); // 8 days ago
+      return date;
+    })(),
+    responded: false,
+  },
+  {
+    id: "10135442015",
+    sale: 20,
+    price: 3286.52,
+    description:
+      "Lorem  ipsum odor amet, consectetuer adipiscing elit. Per vestibulum commodo sit donec non tellus vel. Aptent et mauris ac potenti, ridiculus natoque. Venenatis vestibulum maximus duis facilisi nec dictumst. Ac sociosqu suscipit molestie urna adipiscing per. Egestas vehicula class velit vulputate tempor adipiscing? Malesuada velit tempor praesent hendrerit tellus luctus auctor purus.",
+    image: require("~/assets/images/wine.png"),
+    title: "New wine LWIN: 10101 on Market",
+    desc: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+    date: (() => {
+      const date = new Date();
+      date.setDate(date.getDate() - 9); // 9 days ago
+      return date;
+    })(),
+    responded: false,
+  },
+  {
+    id: "10135442015",
+    sale: 20,
+    price: 3286.52,
+    description:
+      "Lorem  ipsum odor amet, consectetuer adipiscing elit. Per vestibulum commodo sit donec non tellus vel. Aptent et mauris ac potenti, ridiculus natoque. Venenatis vestibulum maximus duis facilisi nec dictumst. Ac sociosqu suscipit molestie urna adipiscing per. Egestas vehicula class velit vulputate tempor adipiscing? Malesuada velit tempor praesent hendrerit tellus luctus auctor purus.",
+    image: require("~/assets/images/wine.png"),
+    title: "Requested booking new date ",
+    desc: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+    date: (() => {
+      const date = new Date();
+      date.setDate(date.getDate() - 10); // 10 days ago
+      return date;
+    })(),
+    responded: true,
+  },
+];

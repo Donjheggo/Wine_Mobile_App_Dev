@@ -36,7 +36,7 @@ export default function EditPhoneForm() {
         </View>
       ) : (
         // Form here
-        <View className="gap-2 mt-6">
+        <View className="gap-2">
           <View className="flex-row justify-between items-center">
             <Text className="text-xl">Phone</Text>
             <Button onPress={() => setEditing(false)} variant="ghost" size="sm">

@@ -1,6 +1,7 @@
 import SettingLinkCard from "~/components/settings/setting-links-card";
 import SubAccountCard from "~/components/settings/sub-account/sub-account-card";
 import AddSubAccountButton from "~/components/settings/sub-account/add-sub-account-button";
+import SupportModal from "~/components/settings/support/support-modal";
 import { Text } from "~/components/ui/text";
 import { View } from "react-native";
 import { SettingLinks } from "~/lib/settings-links";
@@ -20,6 +21,8 @@ export default function Screen() {
             href={item.href}
           />
         ))}
+        {/* Support Modal */}
+        <SupportModal />
         {/* Sub accounts */}
         <View className="flex-row justify-between items-center mt-8">
           <Text className="text-xl font-poppins-medium ">Sub-accounts</Text>

@@ -4,7 +4,7 @@ import { Text } from "~/components/ui/text";
 export default function Screen() {
   return (
     <ScreenLayout>
-      <Text>Indicies Screen</Text>
+      <Text>Insights Screen</Text>
     </ScreenLayout>
   );
 }

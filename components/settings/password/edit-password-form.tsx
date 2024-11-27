@@ -42,7 +42,7 @@ export default function EditPasswordForm() {
         </View>
       ) : (
         // Form here
-        <View className="gap-2 mt-6">
+        <View className="gap-2">
           <View>
             <View className="flex-row justify-between items-center">
               <Text className="text-xl">Current Password</Text>

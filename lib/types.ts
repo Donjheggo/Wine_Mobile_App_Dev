@@ -77,3 +77,9 @@ export type AddSubAccountFormT = {
   email: string;
   phone: string;
 };
+
+export type SupportDefaultFormT = {
+  first_name: string;
+  last_name: string;
+  inquiry: string;
+};
