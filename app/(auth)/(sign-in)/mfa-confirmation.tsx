@@ -44,7 +44,7 @@ export default function Screen() {
           </Link>
         </Text>
       </View>
-      <View className="mt-36">
+      <View className="mt-48">
         <Button onPress={handleSubmit} size="lg" className="mt-10">
           <Text>Login</Text>
         </Button>

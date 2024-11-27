@@ -30,7 +30,7 @@ export default function ScreenLayout({
           keyboardShouldPersistTaps="handled"
           showsVerticalScrollIndicator={false}
         >
-          <View className="flex-1 container max-w-screen-xl mx-auto py-4 px-4">
+          <View className="container max-w-screen-xl mx-auto p-4">
             {children}
           </View>
         </ScrollView>

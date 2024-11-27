@@ -4,7 +4,7 @@ import { Image } from "expo-image";
 
 export default function MfaLayout() {
   return (
-    <>
+    <View>
       <View className="items-center">
         <Image
           source={require("~/assets/images/logo.png")}
@@ -13,6 +13,6 @@ export default function MfaLayout() {
         />
       </View>
       <Slot />
-    </>
+    </View>
   );
 }

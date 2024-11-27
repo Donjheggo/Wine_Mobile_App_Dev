@@ -5,7 +5,7 @@ import { View } from "react-native";
 export default function ScreensLayout() {
   return (
     <ScreenLayout>
-      <View className="max-w-md mx-auto">
+      <View className="container max-w-md mx-auto">
         <Slot />
       </View>
     </ScreenLayout>

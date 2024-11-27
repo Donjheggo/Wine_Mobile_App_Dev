@@ -4,7 +4,7 @@ import { Image } from "expo-image";
 
 export default function SigninLayout() {
   return (
-    <>
+    <View>
       <View className="items-center">
         <Image
           source={require("~/assets/images/logo.png")}
@@ -13,6 +13,6 @@ export default function SigninLayout() {
         />
       </View>
       <Slot />
-    </>
+    </View>
   );
 }
