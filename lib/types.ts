@@ -92,3 +92,20 @@ export type NotificationCardT = {
   price: number;
   responded: boolean;
 };
+
+export type WineCardT = {
+  id: string;
+  description: string;
+  image: string | ImageSourcePropType;
+  type: string;
+  price: number;
+  name: string;
+  full_name: string;
+  market_value: number;
+  score: number;
+  case_size: string;
+  recommended_holding: string;
+  stars: number;
+  growth: number;
+  sale: number;
+};

@@ -1,10 +1,14 @@
 import { Button } from "~/components/ui/button";
-import { SlidersHorizontal } from "~/lib/icons/sliders-horizontal";
+import { ArrowDownUp } from "~/lib/icons/arrow-down-up";
 
 export default function SortButton() {
   return (
     <Button size="icon" variant="ghost">
-      <SlidersHorizontal className="text-muted-foreground" size={35} />
+      <ArrowDownUp
+        className="text-muted-foreground"
+        size={30}
+        strokeWidth={1.5}
+      />
     </Button>
   );
 }

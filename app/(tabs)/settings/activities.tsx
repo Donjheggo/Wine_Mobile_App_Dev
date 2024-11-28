@@ -1,4 +1,4 @@
-import FilterButton from "~/components/ui/filter-button";
+import FilterButton from "~/components/ui/badge-filter-button";
 import SearchInput from "~/components/ui/search-input";
 import SortButton from "~/components/ui/sort-button";
 import ActivitiesTable from "~/components/settings/activities/activities-table";

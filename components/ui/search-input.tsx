@@ -16,10 +16,12 @@ export default function SearchInput() {
   return (
     <View className="flex-1 relative">
       <Search
-        className="text-muted-foreground top-4 md:top-2"
+        className="text-muted-foreground top-2.5 md:top-2"
         style={{ position: "absolute", right: 10, zIndex: 1 }}
+        size={22}
       />
       <Input
+        style={{ height: 40, paddingBottom: 4, paddingRight: 35 }}
         defaultValue={params.query}
         placeholder="Search..."
         onChangeText={(input) => {

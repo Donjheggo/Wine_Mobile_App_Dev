@@ -1,6 +1,5 @@
 import {
   SafeAreaView,
-  ScrollView,
   KeyboardAvoidingView,
   Platform,
   StatusBar,
@@ -25,15 +24,9 @@ export default function ScreenLayout({
         className="flex-1"
         keyboardVerticalOffset={0}
       >
-        <ScrollView
-          className="flex-1"
-          keyboardShouldPersistTaps="handled"
-          showsVerticalScrollIndicator={false}
-        >
-          <View className="container max-w-screen-xl mx-auto p-4">
-            {children}
-          </View>
-        </ScrollView>
+        <View className="flex-1 container max-w-screen-xl mx-auto p-4">
+          {children}
+        </View>
       </KeyboardAvoidingView>
     </SafeAreaView>
   );

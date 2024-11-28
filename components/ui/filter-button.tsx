@@ -1,27 +1,14 @@
 import { Button } from "~/components/ui/button";
-import { Text } from "~/components/ui/text";
-import { useLocalSearchParams } from "expo-router";
-import { router } from "expo-router";
+import { SlidersHorizontal } from "~/lib/icons/sliders-horizontal";
 
-export default function FilterButton({ filterQuery }: { filterQuery: string }) {
-  // Get current params
-  const params = useLocalSearchParams<{ filter?: string }>();
-
-  // Store filter in url params
-  const handleFilter = () => {
-    router.setParams({ filter: filterQuery.toLowerCase() });
-  };
-
-  // Check the current filter
-  const isSelected = params.filter?.toLowerCase() === filterQuery.toLowerCase();
-
+export default function FilterButton({ onPress }: { onPress: () => void }) {
   return (
-    <Button
-      variant={isSelected ? "default" : "outline"}
-      onPress={handleFilter}
-      size="sm"
-    >
-      <Text>{filterQuery}</Text>
+    <Button onPress={onPress} size="icon" variant="ghost">
+      <SlidersHorizontal
+        className="text-muted-foreground"
+        size={30}
+        strokeWidth={1.5}
+      />
     </Button>
   );
 }
