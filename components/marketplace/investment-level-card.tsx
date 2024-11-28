@@ -1,18 +1,13 @@
 import { Image } from "expo-image";
 import { View } from "react-native";
 import { CircleCheck } from "~/lib/icons/circle-check";
-import type { ImageSourcePropType } from "react-native";
-import { formatAmount } from "~/lib/utils";
+import type { InvestmentLevelCardT } from "~/lib/types";
 
 export default function InvestmentLevelCard({
   image,
   investment_minimum,
   user_investment,
-}: {
-  image: string | ImageSourcePropType;
-  investment_minimum: number;
-  user_investment: number;
-}) {
+}: InvestmentLevelCardT) {
   const minimum = investment_minimum;
 
   return (

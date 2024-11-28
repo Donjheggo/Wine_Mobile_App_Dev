@@ -109,3 +109,14 @@ export type WineCardT = {
   growth: number;
   sale: number;
 };
+
+export type InvestmentLevelCardT = {
+  image: string | ImageSourcePropType;
+  investment_minimum: number;
+  user_investment: number;
+};
+
+export type InvestmentCardSeparatorT = {
+  investment_minimum: number;
+  user_investment: number;
+};

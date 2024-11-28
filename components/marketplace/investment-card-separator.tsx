@@ -1,14 +1,12 @@
 import { View } from "react-native";
 import { Text } from "../ui/text";
 import { formatAmount } from "~/lib/utils";
+import type { InvestmentCardSeparatorT } from "~/lib/types";
 
 export default function InvestmentCardSeparator({
   investment_minimum,
   user_investment,
-}: {
-  investment_minimum: number;
-  user_investment: number;
-}) {
+}: InvestmentCardSeparatorT) {
   const left_amount = investment_minimum - user_investment;
 
   return (
