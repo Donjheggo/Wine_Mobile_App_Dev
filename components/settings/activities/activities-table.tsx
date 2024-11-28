@@ -54,6 +54,7 @@ export default function ActivitiesTable() {
         </TableHeader>
 
         <FlatList
+          showsVerticalScrollIndicator={false}
           data={MockActivites}
           keyExtractor={(_, index) => `${index}`}
           renderItem={({ item, index }) => {

@@ -50,7 +50,7 @@ export default function Signin() {
             Forgot Password?
           </Link>
         </View>
-        <Button onPress={handleSubmit} size="lg" className="mt-48">
+        <Button onPress={handleSubmit} size="lg" className="mt-40">
           <Text>Login</Text>
         </Button>
         <Text className="text-sm mt-3 text-muted-foreground">

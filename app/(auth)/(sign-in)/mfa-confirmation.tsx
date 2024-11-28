@@ -39,7 +39,7 @@ export default function Screen() {
             Contact us
           </Link>{" "}
           or{" "}
-          <Link href="/(auth)/(mfa)/mfa-recovery-methods" className="underline">
+          <Link href="/(auth)/(mfa)" className="underline">
             Recover it
           </Link>
         </Text>

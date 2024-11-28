@@ -33,6 +33,7 @@ export default function BillingHistoryTable() {
           </TableRow>
         </TableHeader>
         <FlatList
+          showsVerticalScrollIndicator={false}
           data={MockBillingHistory}
           keyExtractor={(_, index) => `${index}`}
           renderItem={({ item, index }) => (

@@ -15,7 +15,7 @@ export default function Index() {
           contentFit="contain"
           style={{ width: 300, height: 300 }}
         />
-        <Link href="/(auth)/(sign-up)/step-1" asChild>
+        <Link href="/(auth)/(sign-up)" asChild>
           <Button variant="default" size="lg" className="w-full">
             <Text>Create an Account</Text>
           </Button>
@@ -40,7 +40,7 @@ export default function Index() {
         <View className="mt-48">
           <Text>
             Already have an account?{" "}
-            <Link href="/(auth)/(sign-in)/sign-in" className="text-blue-500">
+            <Link href="/(auth)/(sign-in)" className="text-blue-500">
               Signin
             </Link>
           </Text>

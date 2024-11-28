@@ -2,7 +2,6 @@ import {
   SafeAreaView,
   KeyboardAvoidingView,
   Platform,
-  StatusBar,
   View,
 } from "react-native";
 
@@ -12,13 +11,7 @@ export default function ScreenLayout({
   children: React.ReactNode;
 }) {
   return (
-    <SafeAreaView
-      className="flex-1 bg-white"
-      style={{
-        // Add padding top only for Android when StatusBar is translucent
-        paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
-      }}
-    >
+    <SafeAreaView className="flex-1 bg-white">
       <KeyboardAvoidingView
         behavior={Platform.OS === "ios" ? "padding" : "height"}
         className="flex-1"
