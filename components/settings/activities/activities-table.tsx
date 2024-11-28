@@ -1,13 +1,11 @@
 import {
   Table,
-  TableBody,
   TableCell,
   TableHead,
   TableHeader,
   TableRow,
 } from "~/components/ui/table";
-import { View } from "react-native";
-import { useWindowDimensions } from "react-native";
+import { View, FlatList, useWindowDimensions } from "react-native";
 import { Text } from "~/components/ui/text";
 import { cn } from "~/lib/utils";
 import { MockActivites } from "~/lib/mock-data";
@@ -33,7 +31,7 @@ export default function ActivitiesTable() {
   };
 
   return (
-    <View style={{ width: tableWidth }}>
+    <View style={{ width: tableWidth }} className="flex-1">
       {/* Modal */}
       {modalItem && (
         <ActivityModal
@@ -43,7 +41,7 @@ export default function ActivitiesTable() {
         />
       )}
       {/* Table */}
-      <Table aria-labelledby="acitivity-table">
+      <Table aria-labelledby="acitivity-table" className="flex-1">
         <TableHeader>
           <TableRow>
             <TableHead style={{ width: columnWidth }}>
@@ -54,14 +52,17 @@ export default function ActivitiesTable() {
             </TableHead>
           </TableRow>
         </TableHeader>
-        <TableBody>
-          {MockActivites.map((item, index) => {
+
+        <FlatList
+          data={MockActivites}
+          keyExtractor={(_, index) => `${index}`}
+          renderItem={({ item, index }) => {
             const firstWord = item.activity.split(" ")[0];
             return (
               <TableRow
                 key={index}
                 className={cn(
-                  "active:bg-secondary",
+                  "active:bg-secondary flex-1",
                   index % 2 && "bg-muted/40 "
                 )}
                 onPress={() => handleOpenModal(item)}
@@ -110,8 +111,8 @@ export default function ActivitiesTable() {
                 </TableCell>
               </TableRow>
             );
-          })}
-        </TableBody>
+          }}
+        />
       </Table>
     </View>
   );

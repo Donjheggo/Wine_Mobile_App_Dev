@@ -41,12 +41,14 @@ export default function ActivityModal({
               />
             </View>
             <View className="py-4 flex-1">
-              <Text className="text-lg font-poppins-medium">
-                {item.activity}
-              </Text>
-              <Text className="mt-4 text-lg font-poppins-medium">
-                Market Price: ${item.price}
-              </Text>
+              <Text className="text-lg">{item.activity}</Text>
+              <View className="mt-4 flex-row items-center">
+                <Text className="text-lg">Market Price:</Text>
+                <Text className="text-green-500 text-lg font-poppins-medium">
+                  {" "}
+                  ${item.price}{" "}
+                </Text>
+              </View>
             </View>
           </View>
         </View>

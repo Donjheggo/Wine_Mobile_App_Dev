@@ -1,4 +1,4 @@
-import FilterButton from "~/components/ui/badge-filter-button";
+import BadgeFilterButton from "~/components/ui/badge-filter-button";
 import SearchInput from "~/components/ui/search-input";
 import SortButton from "~/components/ui/sort-button";
 import ActivitiesTable from "~/components/settings/activities/activities-table";
@@ -17,18 +17,18 @@ export default function Screen() {
   );
 
   return (
-    <View className="gap-3">
+    <View className="flex-1 gap-3">
       <Text className="text-xl font-poppins-medium">Activities</Text>
       <View className="flex-row ml-auto gap-2">
         {filters.map((item, index) => (
-          <FilterButton key={index} filterQuery={item} />
+          <BadgeFilterButton key={index} filterQuery={item} />
         ))}
       </View>
-      <View className=" flex-row gap-2 items-center justify-between">
+      <View className="flex-row gap-2 items-center justify-between">
         <SearchInput />
         <SortButton />
       </View>
-      <View className="">
+      <View className="flex-1">
         <ActivitiesTable />
       </View>
     </View>
