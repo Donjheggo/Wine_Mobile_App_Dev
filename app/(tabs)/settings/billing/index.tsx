@@ -9,7 +9,7 @@ import BillingHistoryTable from "~/components/settings/billing/billing-history-t
 
 export default function Screen() {
   return (
-    <View className="gap-2">
+    <View className="gap-2 flex-1">
       <Text className="text-xl font-poppins-medium">Billing</Text>
       <View className="flex-row ml-auto gap-2">
         <WithdrawButton />
