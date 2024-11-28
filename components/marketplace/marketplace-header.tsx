@@ -3,9 +3,14 @@ import { Button } from "../ui/button";
 import { Text } from "../ui/text";
 import { Badge } from "../ui/badge";
 import { Workflow } from "~/lib/icons/work-flow";
+import { useState } from "react";
 import InvestmentLevelSelect from "./investment-level";
+import PortfolioBuilderModal from "~/components/marketplace/portfolio-builder-modal";
 
 export default function MarketplaceHeader() {
+  const [portfolioModalVisible, setPortfolioBuilderModalVisible] =
+    useState<boolean>(false);
+
   return (
     <View className="gap-4">
       <View className="flex-row items-center justify-between">
@@ -13,6 +18,7 @@ export default function MarketplaceHeader() {
           <Text className="text-lg">Marketplace</Text>
           <Text className="text-muted-foreground">Shop your wine now</Text>
           <Button
+            onPress={() => setPortfolioBuilderModalVisible(true)}
             size="sm"
             className="bg-[#5856D6] flex-row gap-2 items-center"
           >
@@ -31,6 +37,11 @@ export default function MarketplaceHeader() {
         </View>
       </View>
       <InvestmentLevelSelect />
+      {/* Portfolio Builder Modal */}
+      <PortfolioBuilderModal
+        modalVisible={portfolioModalVisible}
+        setModalVisible={setPortfolioBuilderModalVisible}
+      />
     </View>
   );
 }

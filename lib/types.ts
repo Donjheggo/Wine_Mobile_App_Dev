@@ -120,3 +120,9 @@ export type InvestmentCardSeparatorT = {
   investment_minimum: number;
   user_investment: number;
 };
+
+export type PortfolioBuilderFormT = {
+  investment_range: string;
+  investment_time: string;
+  risk_appetite: string;
+};

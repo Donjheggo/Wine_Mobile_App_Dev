@@ -1,7 +1,6 @@
 import ScreenLayout from "~/components/layout/screen-layout";
-import { Slot } from "expo-router";
-
 import MarketplaceHeader from "~/components/marketplace/marketplace-header";
+import { Slot } from "expo-router";
 
 export default function MarketplaceLayout() {
   return (

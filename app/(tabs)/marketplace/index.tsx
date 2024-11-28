@@ -12,7 +12,7 @@ import WinesCard from "~/components/marketplace/wines-card";
 import FilterWinesModal from "~/components/marketplace/filter-wines-modal";
 
 export default function Screen() {
-  const [modalVisible, setModalVisible] = useState<boolean>(false);
+  const [filterModalVisible, setFilterModalVisible] = useState<boolean>(false);
 
   // Initialized default filter to "all" and query to empty string
   useFocusEffect(
@@ -27,7 +27,7 @@ export default function Screen() {
         <Text className="text-base font-poppins-medium">Available Wines</Text>
         <View className="flex-1 flex-row items-center gap-1">
           <SearchInput />
-          <FilterButton onPress={() => setModalVisible(true)} />
+          <FilterButton onPress={() => setFilterModalVisible(true)} />
           <SortButton />
         </View>
       </View>
@@ -41,8 +41,8 @@ export default function Screen() {
       />
       {/* Filter Modal */}
       <FilterWinesModal
-        modalVisible={modalVisible}
-        setModalVisible={setModalVisible}
+        modalVisible={filterModalVisible}
+        setModalVisible={setFilterModalVisible}
       />
     </View>
   );
