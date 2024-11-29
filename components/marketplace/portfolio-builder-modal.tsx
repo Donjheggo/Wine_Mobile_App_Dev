@@ -4,6 +4,7 @@ import { X } from "~/lib/icons/x";
 import { Button } from "~/components/ui/button";
 import { PortalHost } from "@rn-primitives/portal";
 import PortfolioBuilderForm from "./portfolio-builder-form";
+import { Workflow } from "~/lib/icons/work-flow";
 
 export default function PortfolioBuilderModal({
   modalVisible,
@@ -24,7 +25,8 @@ export default function PortfolioBuilderModal({
         <View className="flex-1 bg-black/40 justify-end">
           <View className="bg-white p-4 h-[55%] rounded-lg">
             <View className="flex-row items-center justify-between">
-              <View>
+              <View className="flex-row items-center gap-2">
+                <Workflow className="text-muted-foreground" size={20} />
                 <Text className="text-lg font-poppins-medium">
                   Portfolio builder
                 </Text>

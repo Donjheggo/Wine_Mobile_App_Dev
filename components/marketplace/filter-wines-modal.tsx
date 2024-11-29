@@ -2,6 +2,7 @@ import { View, Modal, FlatList } from "react-native";
 import { Text } from "~/components/ui/text";
 import { X } from "~/lib/icons/x";
 import { Button } from "~/components/ui/button";
+import { SlidersHorizontal } from "~/lib/icons/sliders-horizontal";
 import BadgeFilterButton from "../ui/badge-filter-button";
 
 export default function FilterWinesModal({
@@ -22,7 +23,10 @@ export default function FilterWinesModal({
       <View className="flex-1 bg-black/40 justify-end">
         <View className="bg-white p-4 h-[33%] rounded-lg">
           <View className="flex-row items-center justify-between">
-            <Text className="text-lg font-poppins-medium">Filter wines</Text>
+            <View className="flex-row items-center gap-2">
+              <SlidersHorizontal className="text-muted-foreground" size={20} />
+              <Text className="text-lg font-poppins-medium">Filter wines</Text>
+            </View>
             <Button
               size="icon"
               variant="ghost"
