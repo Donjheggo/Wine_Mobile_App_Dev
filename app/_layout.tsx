@@ -2,6 +2,8 @@ import { Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import { useFonts } from "expo-font";
 import { PortalHost } from "@rn-primitives/portal";
+import Toast from "react-native-toast-message";
+import { toastConfig } from "~/components/ui/toast-config";
 import "../global.css";
 
 export default function RootLayout() {
@@ -27,6 +29,7 @@ export default function RootLayout() {
         <Stack.Screen name="(success-screens)" />
       </Stack>
       <PortalHost />
+      <Toast position="top" topOffset={100} config={toastConfig} />
     </>
   );
 }

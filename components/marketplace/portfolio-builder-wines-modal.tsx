@@ -4,7 +4,7 @@ import { X } from "~/lib/icons/x";
 import { Button } from "~/components/ui/button";
 import { PortalHost } from "@rn-primitives/portal";
 import { MockWines } from "~/lib/mock-data";
-import WinesCard from "./wines-card";
+import WinesCard from "./wine/wines-card";
 import { Workflow } from "~/lib/icons/work-flow";
 
 export default function PortfolioBuilderWinesModal({

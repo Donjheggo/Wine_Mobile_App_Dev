@@ -10,9 +10,21 @@ export default function TabScreens() {
 
   // Check if the current path is not a primary tab.
   // This is used for Left header conditional rendering of Greetings or Back Button
-  const primaryTabs = tabs.some(
-    (tab) => tab.title !== null && pathname.includes(tab.file_name)
-  );
+  const primaryTabs = tabs.some((tab) => {
+    if (!tab.title) return false;
+
+    // Get the base route (e.g., 'marketplace' 'portfolio')
+    const baseRoute = tab.file_name.split("/")[0];
+
+    // Check if current path starts with the base route
+    // and doesn't contain any addiotional segments.
+    const isBaseRoute =
+      pathname == `/${tab.file_name}` ||
+      pathname === `/${baseRoute}` ||
+      (tab.file_name === "index" && pathname === "/"); // Handle index as root path
+
+    return isBaseRoute;
+  });
 
   return (
     <Tabs

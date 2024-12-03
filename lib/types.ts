@@ -104,10 +104,12 @@ export type WineCardT = {
   market_value: number;
   score: number;
   case_size: string;
+  cases?: number;
   recommended_holding: string;
   stars: number;
   growth: number;
   sale: number;
+  href?: string;
 };
 
 export type InvestmentLevelCardT = {
@@ -125,4 +127,23 @@ export type PortfolioBuilderFormT = {
   investment_range: string;
   investment_time: string;
   risk_appetite: string;
+};
+
+export type WineCardDialogT = {
+  modalVisible: boolean;
+  setModalVisible: React.Dispatch<React.SetStateAction<boolean>>;
+  item: WineCardT;
+};
+
+export type DeliverFormT = {
+  name: string;
+  address: string;
+  contact_number: string;
+};
+
+export type ManageModalsVisibilityT = {
+  sell: boolean;
+  buymore: boolean;
+  gift: boolean;
+  deliver: boolean;
 };

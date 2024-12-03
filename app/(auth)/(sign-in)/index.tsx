@@ -55,7 +55,7 @@ export default function Signin() {
         </Button>
         <Text className="text-sm mt-3 text-muted-foreground">
           You don't have an account yet?{" "}
-          <Link href="/(auth)/(sign-up)/step-1" className="text-blue-500">
+          <Link href="/(auth)/(sign-up)" className="text-blue-500">
             Create an account here
           </Link>
         </Text>

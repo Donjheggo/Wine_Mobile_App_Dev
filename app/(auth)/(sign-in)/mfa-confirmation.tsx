@@ -14,7 +14,7 @@ export default function Screen() {
 
   const handleSubmit = async () => {
     // Add confirmation validation here
-    router.push("/(tabs)/dashboard");
+    router.push("/(tabs)");
   };
 
   return (

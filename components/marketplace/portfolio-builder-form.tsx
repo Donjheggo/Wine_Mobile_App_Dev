@@ -41,8 +41,6 @@ export default function PortfolioBuilderForm({
     }
   };
 
-  console.log("Portfolio builder modal: ", portfolioBuilderWinesModalVisible);
-
   return (
     <>
       {/* Portfolio Builder Wines Modal */}

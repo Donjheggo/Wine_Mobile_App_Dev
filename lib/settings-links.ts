@@ -3,8 +3,8 @@ import { Box } from "~/lib/icons/box";
 import { KeyRound } from "~/lib/icons/key-round";
 import { Kanban } from "~/lib/icons/kanban";
 import { Receipt } from "~/lib/icons/receipt";
-import { CircleHelp } from "~/lib/icons/circle-help";
 import { NotebookText } from "~/lib/icons/notebook-text";
+// import { CircleHelp } from "~/lib/icons/circle-help";
 import type { SettingLinksCardPropsT } from "./types";
 
 export const SettingLinks: SettingLinksCardPropsT[] = [

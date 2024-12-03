@@ -4,7 +4,7 @@ import { Text } from "../ui/text";
 import { Badge } from "../ui/badge";
 import { Workflow } from "~/lib/icons/work-flow";
 import { useState } from "react";
-import InvestmentLevelSelect from "./investment-level";
+import InvestmentLevel from "./investment-level";
 import PortfolioBuilderModal from "~/components/marketplace/portfolio-builder-modal";
 
 export default function MarketplaceHeader() {
@@ -36,7 +36,7 @@ export default function MarketplaceHeader() {
           </Badge>
         </View>
       </View>
-      <InvestmentLevelSelect />
+      <InvestmentLevel />
       {/* Portfolio Builder Modal */}
       <PortfolioBuilderModal
         modalVisible={portfolioModalVisible}
